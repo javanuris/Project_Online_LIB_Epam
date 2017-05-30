@@ -7,11 +7,11 @@ import nuris.epam.entity.Transaction;
 import java.util.List;
 
 /**
- * Abstract class, describes additional queries for the management table in the database.
+ * Interface, describes additional queries for the management table in the database.
  *
  * @author Kalenov Nurislam
  */
-public abstract class ManagementDao extends BaseDao<Management> {
+public interface ManagementDao extends Dao<Management> {
 
     /**
      * Method, returns the nth number of the Management entity, taking into account its state (active, inactive).
@@ -21,7 +21,7 @@ public abstract class ManagementDao extends BaseDao<Management> {
      * @param isActive - State of entities, may be active or inactive
      * @return Returns a specific number of books
      */
-    public abstract List<Management> getListManagement(int start, int count, boolean isActive) throws DaoException;
+     List<Management> getListManagement(int start, int count, boolean isActive) throws DaoException;
 
 
     /**
@@ -30,5 +30,5 @@ public abstract class ManagementDao extends BaseDao<Management> {
      * @param isActive - State of entity Management
      * @return Returns the entity list Management
      */
-    public abstract int getManagementCount(boolean isActive) throws DaoException;
+     int getManagementCount(boolean isActive) throws DaoException;
 }

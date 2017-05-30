@@ -7,11 +7,11 @@ import nuris.epam.entity.Genre;
 import java.util.List;
 
 /**
- * Abstract class, describes additional queries for the genre table in the database.
+ * Interface, describes additional queries for the genre table in the database.
  *
  * @author Kalenov Nurislam
  */
-public abstract class GenreDao extends BaseDao<Genre> {
+public interface GenreDao extends Dao<Genre> {
 
     /**
      * A method that searches for a genre, taking into account the Book entity.
@@ -19,13 +19,13 @@ public abstract class GenreDao extends BaseDao<Genre> {
      * @param book - entity
      * @return Returns a particular genre.
      */
-    public abstract Genre findByBook(Book book) throws DaoException;
+    Genre findByBook(Book book) throws DaoException;
 
     /**
      * Method, provides a list of genres.
      *
      * @return Returns a particular genre.
      */
-    public abstract List<Genre> getAllGenre() throws DaoException;
+     List<Genre> getAllGenre() throws DaoException;
 
 }

@@ -5,18 +5,18 @@ import nuris.epam.entity.Customer;
 import nuris.epam.entity.CustomerRole;
 
 /**
- * Abstract class, describes additional queries for the customerRole table in the database.
+ * Interface, describes additional queries for the customerRole table in the database.
  *
  * @author Kalenov Nurislam
  */
-public abstract class CustomerRoleDao extends BaseDao<CustomerRole> {
+public interface CustomerRoleDao extends Dao<CustomerRole> {
     /**
      * The method looks for a role with the Customer entity.
      *
      * @param customer - entity
      * @return Returns a specific role.
      */
-    public abstract CustomerRole findByCustomer(Customer customer) throws DaoException;
+    CustomerRole findByCustomer(Customer customer) throws DaoException;
 
     /**
      * Method, looking for a role by the name of the role.
@@ -24,6 +24,6 @@ public abstract class CustomerRoleDao extends BaseDao<CustomerRole> {
      * @param nameRole - name of the role.
      * @return Returns a specific role.
      */
-    public abstract CustomerRole findRoleByName(String nameRole) throws DaoException;
+    CustomerRole findRoleByName(String nameRole) throws DaoException;
 
 }

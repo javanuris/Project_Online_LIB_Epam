@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.TransactionDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Management;
@@ -17,7 +18,7 @@ import java.util.List;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlTransactionDao extends TransactionDao {
+public class MySqlTransactionDao extends BaseDao implements TransactionDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlTransactionDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM transaction WHERE id_transaction = ?";

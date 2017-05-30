@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.BookInfoDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.BookInfo;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlBookInfoDao extends BookInfoDao {
+public class MySqlBookInfoDao extends BaseDao implements BookInfoDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlBookInfoDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM book_info WHERE id_book_info = ?";

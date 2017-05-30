@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.CityDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.City;
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlCityDao extends CityDao {
+public class MySqlCityDao extends BaseDao implements CityDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlCityDao.class);
 
     private static final String SELECT_ALL = "SELECT * FROM city";

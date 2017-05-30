@@ -5,11 +5,11 @@ import nuris.epam.entity.BookInfo;
 import nuris.epam.entity.Transaction;
 
 /**
- * Abstract class, describes additional queries for the bookInfo table in the database.
+ * Interface, describes additional queries for the bookInfo table in the database.
  *
  * @author Kalenov Nurislam
  */
-public abstract class BookInfoDao extends BaseDao<BookInfo> {
+public interface BookInfoDao extends Dao<BookInfo> {
 
     /**
      * Method, to search for a book by the number in the table.
@@ -17,7 +17,7 @@ public abstract class BookInfoDao extends BaseDao<BookInfo> {
      * @param id - unique number
      * @return Returns the concise essence of BookInfo.
      */
-    public abstract BookInfo findByBook(int id) throws DaoException;
+    BookInfo findByBook(int id) throws DaoException;
 
     /**
      * Метод, для поиск книги с учетом сущности Transaction.
@@ -25,5 +25,5 @@ public abstract class BookInfoDao extends BaseDao<BookInfo> {
      * @param transaction - entity
      * @return Returns a specific BookInfo entity.
      */
-    public abstract BookInfo findByTransaction(Transaction transaction) throws DaoException;
+    BookInfo findByTransaction(Transaction transaction) throws DaoException;
 }

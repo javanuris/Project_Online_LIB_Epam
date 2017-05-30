@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.ManagementDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Management;
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlManagementDao extends ManagementDao {
+public class MySqlManagementDao extends BaseDao implements ManagementDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlManagementDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM management WHERE id_management = ?";

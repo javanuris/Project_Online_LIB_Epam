@@ -5,11 +5,11 @@ import nuris.epam.entity.Author;
 import nuris.epam.entity.Book;
 
 /**
- * Abstract class, describes additional queries for the author table in the database.
+ * Interface, describes additional queries for the author table in the database.
  *
  * @author Kalenov Nurislam
  */
-public abstract class AuthorDao extends BaseDao<Author> {
+public interface AuthorDao extends Dao<Author>{
 
     /**
      * The method searches with the Book entity and returns the Author entity.
@@ -17,7 +17,7 @@ public abstract class AuthorDao extends BaseDao<Author> {
      * @param book - entity.
      * @return Returns a concrete entity.
      */
-    public abstract Author findByBook(Book book) throws DaoException;
+    Author findByBook(Book book) throws DaoException;
 
 
 }

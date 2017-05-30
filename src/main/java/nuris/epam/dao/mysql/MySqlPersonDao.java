@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.PersonDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Customer;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlPersonDao extends PersonDao {
+public class MySqlPersonDao extends BaseDao implements PersonDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlPersonDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM person WHERE id_person = ?";

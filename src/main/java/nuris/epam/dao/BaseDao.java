@@ -1,7 +1,5 @@
 package nuris.epam.dao;
 
-import nuris.epam.entity.BaseEntity;
-
 import java.sql.Connection;
 
 /**
@@ -9,7 +7,7 @@ import java.sql.Connection;
  *
  * @author Kalenov Nurislam
  */
-public abstract class BaseDao<T extends BaseEntity> implements Dao<T> {
+public abstract class BaseDao{
 
     private Connection connection;
 

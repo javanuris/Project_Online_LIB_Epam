@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.CustomerRoleDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Customer;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlCustomerRoleDao extends CustomerRoleDao {
+public class MySqlCustomerRoleDao extends BaseDao implements CustomerRoleDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlCustomerRoleDao.class);
 
     private static final String FIND_BY_CUSTOMER = "SELECT role.id_role,role.name FROM role JOIN customer ON customer.id_role  = role.id_role WHERE customer.id_customer = ?";

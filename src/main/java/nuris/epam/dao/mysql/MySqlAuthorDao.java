@@ -1,6 +1,7 @@
 package nuris.epam.dao.mysql;
 
 import nuris.epam.dao.AuthorDao;
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Author;
 import nuris.epam.entity.Book;
@@ -14,7 +15,7 @@ import java.sql.SQLException;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlAuthorDao extends AuthorDao {
+public class MySqlAuthorDao extends BaseDao implements AuthorDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlAuthorDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM author WHERE id_author = ?";

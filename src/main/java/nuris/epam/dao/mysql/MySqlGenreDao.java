@@ -1,5 +1,6 @@
 package nuris.epam.dao.mysql;
 
+import nuris.epam.dao.BaseDao;
 import nuris.epam.dao.GenreDao;
 import nuris.epam.dao.exception.DaoException;
 import nuris.epam.entity.Book;
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * @author Kalenov Nurislam
  */
-public class MySqlGenreDao extends GenreDao {
+public class MySqlGenreDao extends BaseDao implements GenreDao {
     private static final Logger log = LoggerFactory.getLogger(MySqlGenreDao.class);
 
     private static final String FIND_BY_ID = "SELECT * FROM genre WHERE id_genre = ?";
